@@ -27,9 +27,9 @@ app.route('/index')
   .post(async (req, res) => { //make async for lab7
     console.log('POST request detected');
     console.log('Form data in req.body', req.body);
-    const data = await fetch("https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json"); //lab7
+    const data = await fetch("https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json");
     const dataj = await data.json();
-    res.json(dataj); //lab7
+    res.json(dataj);
   });
 
 app.listen(port, () => {
