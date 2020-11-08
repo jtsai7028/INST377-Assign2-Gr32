@@ -3,7 +3,7 @@
 /* eslint-disable no-unused-vars */
 import express from 'express';
 import dotenv from 'dotenv';
-import fetch from 'node-fetch';
+import fetch from 'node-fetch'; //lab7
 
 dotenv.config();
 
@@ -21,19 +21,18 @@ app.use((req, res, next) => {
 });
 
 app.route('/index')
-  .get((req, res) => {
+  .get(async (req, res) => {
     console.log('GET request detected');
-    //test get data, don't forget "asynch(req, res)"!
-    /*const data = await fetch("https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json"); //lab7
-    const dataj = await data.json();*/
-    // console.log("fetch request data", dataj);//lab7
+    const data = await fetch("https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json");
+    const dataj = await data.json();
+    console.log("fetch request data", dataj);
   })
-  .post((req, res) => {
+  .post((req, res) => { //make async for lab7
     console.log('POST request detected');
-    /*const data = await fetch("https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json");
-    const dataj = await data.json();*/
-    // console.log("fetch request data", dataj);
-    //res.json(dataj);
+    // const data = await fetch("https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json"); //lab7
+    // const dataj = await data.json();
+    // console.log('Form data in req.body', req.body);
+    // res.json(dataj); //lab7
   });
 
 app.listen(port, () => {
