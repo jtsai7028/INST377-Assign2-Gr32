@@ -21,7 +21,7 @@ app.use((req, res, next) => {
 });
 
 app.route('/index')
-  .get(async (req, res) => {
+  .get((req, res) => {
     console.log('GET request detected');
   })
   .post(async (req, res) => { //make async for lab7
