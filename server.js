@@ -23,16 +23,13 @@ app.use((req, res, next) => {
 app.route('/index')
   .get(async (req, res) => {
     console.log('GET request detected');
-    const data = await fetch("https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json"); //lab7
-    const dataj = await data.json();
-    console.log("fetch request data", dataj);//lab7
   })
-  .post((req, res) => { //make async for lab7
+  .post(async (req, res) => { //make async for lab7
     console.log('POST request detected');
     console.log('Form data in req.body', req.body);
-    // const data = await fetch("https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json"); //lab7
-    // const dataj = await data.json();
-    // res.json(dataj); //lab7
+    const data = await fetch("https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json"); //lab7
+    const dataj = await data.json();
+    res.json(dataj); //lab7
   });
 
 app.listen(port, () => {
