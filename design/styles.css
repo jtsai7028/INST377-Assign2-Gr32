@@ -71,3 +71,6 @@ h1 {
   border: 5px none;
   margin-bottom: 5%;
 }
+.location{
+  white-space: pre-line;
+}
