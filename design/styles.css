@@ -65,6 +65,7 @@ h1 {
 }
 .suggestions li{
   display: flex;
+  flex-direction: column;
   background: green;
   width: 320px;
   padding: 10px;
