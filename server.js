@@ -21,15 +21,15 @@ app.use((req, res, next) => {
 });
 
 app.route('/index')
-  .get((req, res) => {
+  .get(async (req, res) => {
     console.log('GET request detected');
-  })
-  .post(async (req, res) => { //make async for lab7
-    console.log('POST request detected');
-    console.log('Form data in req.body', req.body);
     const data = await fetch("https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json");
     const dataj = await data.json();
     res.json(dataj);
+  })
+  .post((req, res) => {
+    console.log('POST request detected');
+    console.log('Form data in req.body', req.body);
   });
 
 app.listen(port, () => {

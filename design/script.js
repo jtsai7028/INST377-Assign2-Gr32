@@ -1,15 +1,13 @@
-const pgData = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
-
 const cities = [];
 
-fetch(pgData)
+fetch('/index')
   .then(blob => blob.json())
-  .then(data => cities.push(...data))  /*... == spreading into the push!*/
+  .then(data => cities.push(...data))  //... == spreading into the push!
 
-function findMatching(wordsToMatch, cities){
+function findMatching(wordsToMatch, cities) {
   return cities.filter(place => {
-    const matches = new RegExp(wordsToMatch, 'gi'); 
-    /* g = global, i = insensitive */
+    const matches = new RegExp(wordsToMatch, 'gi');
+     // g = global, i = insensitive
     if(wordsToMatch === '') {
       return null;
     }
@@ -36,5 +34,3 @@ const suggestions = document.querySelector('.suggestions');
 
 searchInput.addEventListener('change', displayMatches);
 searchInput.addEventListener('keyup', displayMatches);
-
-
