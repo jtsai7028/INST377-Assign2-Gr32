@@ -1,11 +1,11 @@
-const cities = [];
+const restaurantList = [];
 
 fetch('/index')
   .then(blob => blob.json())
-  .then(data => cities.push(...data))  //... == spreading into the push!
+  .then(data => restaurantList.push(...data))  //... == spreading into the push!
 
-function findMatching(wordsToMatch, cities) {
-  return cities.filter(place => {
+function findMatching(wordsToMatch, restaurants) {
+  return restaurants.filter(place => {
     const matches = new RegExp(wordsToMatch, 'gi');
      // g = global, i = insensitive
     if(wordsToMatch === '') {
@@ -16,12 +16,12 @@ function findMatching(wordsToMatch, cities) {
 }
 
 function displayMatches() {
-  const matchingArray = findMatching(this.value, cities);
+  const matchingArray = findMatching(this.value, restaurantList);
   const html = matchingArray.map(place => {
     return `
       <li>
         <span class = "name">${place.name}</span>
-        <span class = "location">${place.city}, ${place.state}, ${place.zipcode}</span>
+        <span class = "location">${place.city}, ${place.state}</span>
         <span class = "category">${place.category}</span>
       </li>
     `;
