@@ -21,11 +21,7 @@ function displayMatches() {
     return `
       <li>
         <span class = "name">${place.name}</span>
-<<<<<<< HEAD
         <span class = "location">${place.city}, ${place.state}</span>
-=======
-        <span class = "location">${place.city}, ${place.state}, ${place.zip}</span>
->>>>>>> pr/5
         <span class = "category">${place.category}</span>
       </li>
     `;
