@@ -1,3 +1,5 @@
+const { zip } = require("cypress/types/lodash");
+
 const restaurantList = [];
 
 fetch('/index')
@@ -21,8 +23,8 @@ function displayMatches() {
     return `
       <li>
         <span class = "name">${place.name}</span>
-        <span class = "location">${place.city}, ${place.state}</span>
         <span class = "category">${place.category}</span>
+        <span class = "location">${place.city}, ${place.state}</span>
       </li>
     `;
   }).join('');
