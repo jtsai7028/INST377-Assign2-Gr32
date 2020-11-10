@@ -61,11 +61,9 @@ h1 {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-
 }
 .suggestions li{
   font: 1em 'Raleway';
-  
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(81,9,121,0.7525385154061625) 35%, rgba(0,212,255,1) 100%);
   display: flex;
   flex-direction: column;
@@ -74,11 +72,13 @@ h1 {
   padding: 10px;
   border: 5px none;
   margin-bottom: 5%;
-  
 }
 .name{
   font: 1.5em 'Ubuntu', sans-serif;
 }
 .category{
   font: 1.2em 'Nunito', sans-serif;;
+}
+.zip{
+  
 }
