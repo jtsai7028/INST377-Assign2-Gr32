@@ -1,6 +1,6 @@
 /*CSS*/
 body {
-  background: purple;
+  background:#56DB9D;
 }
 
 .wrapper {
@@ -10,6 +10,7 @@ body {
 }
 
 .header {
+  font: 'Courgette', cursive;
   color: #fff;
   display: flex;
   flex-direction: row;
@@ -64,14 +65,13 @@ h1 {
 
 }
 .suggestions li{
+  font: 1.5em 'Ubuntu', sans-serif;
   display: flex;
   flex-direction: column;
-  background: green;
-  width: 320px;
+  background: #B96BDB;
+  width: 500px;
   padding: 10px;
   border: 5px none;
   margin-bottom: 5%;
-}
-.name{
-  font: 1.2em sans-serif bold;
+ 
 }
