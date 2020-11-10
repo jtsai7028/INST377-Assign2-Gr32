@@ -1,6 +1,6 @@
 /*CSS*/
 body {
-  background: purple;
+  background:#56DB9D;
 }
 
 .wrapper {
@@ -66,12 +66,12 @@ h1 {
 .suggestions li{
   display: flex;
   flex-direction: column;
-  background: green;
+  background: #B96BDB;
   width: 320px;
   padding: 10px;
   border: 5px none;
   margin-bottom: 5%;
 }
 .name{
-  font: 1.2em sans-serif bold;
+  font: 2em sans-serif bold;
 }
