@@ -10,6 +10,7 @@ body {
 }
 
 .header {
+  font: 'Courgette', cursive;
   color: #fff;
   display: flex;
   flex-direction: row;
@@ -64,6 +65,7 @@ h1 {
 
 }
 .suggestions li{
+  font: 1.5em 'Ubuntu', sans-serif;
   display: flex;
   flex-direction: column;
   background: #B96BDB;
@@ -71,7 +73,5 @@ h1 {
   padding: 10px;
   border: 5px none;
   margin-bottom: 5%;
-}
-.name{
-  font: 2em sans-serif bold;
+  width: 70%;
 }
