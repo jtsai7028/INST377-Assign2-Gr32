@@ -32,7 +32,6 @@ h1 {
   background-color: #3895a8;
   color: white;
   display: flex;
-
   align-items: center;
   justify-content: center;
   font-weight: bold;
@@ -67,9 +66,10 @@ h1 {
 .suggestions li{
   font: 1em 'Raleway';
   
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(81,9,121,0.7525385154061625) 35%, rgba(0,212,255,1) 100%);
   display: flex;
   flex-direction: column;
-  background: #B96BDB;
+  color: white;
   width: 500px;
   padding: 10px;
   border: 5px none;
