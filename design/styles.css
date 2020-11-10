@@ -69,9 +69,9 @@ h1 {
   display: flex;
   flex-direction: column;
   background: #B96BDB;
-  width: 320px;
+  width: 500px;
   padding: 10px;
   border: 5px none;
   margin-bottom: 5%;
-  width: 70%;
+ 
 }
